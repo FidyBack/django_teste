@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
 ]
 
 MIDDLEWARE = [
@@ -77,9 +78,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tasks',
-        'USER': 'aaa',
-        'PASSWORD': '123',
-        'HOST': 'ec2-3-138-60-176.us-east-2.compute.amazonaws.com',
+        'USER': 'cloud',
+        'PASSWORD': 'cloudx',
+        'HOST': 'ec2-3-145-50-215.us-east-2.compute.amazonaws.com',
         'PORT': '3306',
     }
 }
