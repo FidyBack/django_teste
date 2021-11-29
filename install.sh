@@ -5,7 +5,7 @@ python3 /home/ubuntu/django_teste/manage.py migrate
 
 echo '@reboot python3 /home/ubuntu/django_teste/manage.py runserver 0:8080' | crontab
 
-export DJANGO_SUPERUSER_PASSWORD=cloud
-export DJANGO_SUPERUSER_USERNAME=cloudx
+export DJANGO_SUPERUSER_PASSWORD=cloudx
+export DJANGO_SUPERUSER_USERNAME=cloud
 export DJANGO_SUPERUSER_EMAIL=cloud@a.com
 python3 /home/ubuntu/django_teste/manage.py createsuperuser --noinput
