@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p><b>{{ task.title }}:</b> {{ task.description }}</p>
+        <p><b>Criação:</b> {{ task.pub_date }}</p>
+        <form action="{% url 'polls:all_tasks' %}">
+            <input type="submit"  value="Voltar">
+        </form>
+
+        <form action="{% url 'polls:delete_task' task.id %}", method="post">
+            {% csrf_token %}
+            <input id='id-submit' type='hidden' name = 'task_id' value = {{ task.id }}>
+            <input type="submit" value="Deletar Task">
+        </form>
+    </body>
+</html>

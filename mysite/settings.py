@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'tasks',
         'USER': 'cloud',
         'PASSWORD': 'cloudx',
-        'HOST': 'ec2-3-138-169-111.us-east-2.compute.amazonaws.com',
+        'HOST': '',
         'PORT': '3306',
     }
 }

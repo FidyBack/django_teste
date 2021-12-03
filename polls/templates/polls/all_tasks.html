@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        {% if tasks_title %}
+            <ul>
+            {% for task in tasks_title %}
+                <li><a href="{% url 'polls:task' task.id  %}">{{ task.title }}</a></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>Nenhuma task existente.</p>
+        {% endif %}
+
+        <form action="{% url 'polls:create_task' %}" method="post">
+        {% csrf_token %}
+        <fieldset>
+            <legend><h1>Criar Task</h1></legend>
+            {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+            <label for="title">Title: </label>
+            <input id="title" type="text" name="title"  maxlength="100" required>
+
+            <label for="description">Description: </label>
+            <input id="description" type="text" name="description" required>
+
+        </fieldset>
+        <input type="submit" value="Criar Task">
+        </form>
+    </body>
+</html>
